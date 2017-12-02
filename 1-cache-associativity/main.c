@@ -41,11 +41,8 @@ long long time_ns() {
     return t.tv_nsec + t.tv_sec * 1000LL * 1000 * 1000;
 }
 
-void print_info() {
-}
-
 void warmup_cache() {
-    for (int i = 0; i < BUFFER_SIZE; ++i) {
+    for (int i = BUFFER_SIZE - 1; i >= 0; --i) {
         (char)buffer[i];
     }
     fprintf(stdout, INFO " Cache has been warmed up.\n");

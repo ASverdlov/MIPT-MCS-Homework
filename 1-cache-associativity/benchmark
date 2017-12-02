@@ -1,0 +1,6 @@
+#!/bin/bash
+
+set -ex
+
+gcc main.c -O0 -Wno-unused-value
+./a.out

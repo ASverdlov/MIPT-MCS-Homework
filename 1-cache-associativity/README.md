@@ -1,7 +1,7 @@
 Finding out cache associativity
 -------------------------------
 
-$ FRAGMENT=16777216 ./benchmark
+```$ FRAGMENT=16777216 ./benchmark
 + gcc main.c -O0 -Wno-unused-value
 + ./a.out
 [BENCHMARK] Fragment size: 16777216 bytes
@@ -38,4 +38,4 @@ $ FRAGMENT=16777216 ./benchmark
 [BENCHMARK] # fragments = 29    access (ns) = 1.924994    elapsed (ns) = 936585000
 [BENCHMARK] # fragments = 30    access (ns) = 1.683338    elapsed (ns) = 847252000
 [BENCHMARK] # fragments = 31    access (ns) = 1.893207    elapsed (ns) = 984645000
-[BENCHMARK] # fragments = 32    access (ns) = 2.542429    elapsed (ns) = 1364956000
+[BENCHMARK] # fragments = 32    access (ns) = 2.542429    elapsed (ns) = 1364956000```

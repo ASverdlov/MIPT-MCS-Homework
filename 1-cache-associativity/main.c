@@ -49,7 +49,7 @@ void warmup_cache() {
 }
 
 void benchmark(int num_fragments, int fragmentsize) {
-    int start_time, end_time;
+    long long start_time, end_time;
     long long elapsed_time;
     double access_time;
 
@@ -58,7 +58,7 @@ void benchmark(int num_fragments, int fragmentsize) {
 
     start_time = time_ns();
     for (int offset = 0; offset < fragmentsize; ++offset) {
-        for (int i = 0; i < fragments_end; i += fragmentsize) {
+        for (int i = offset; i < fragments_end; i += fragmentsize) {
             (char)buffer[i + offset];
         }
     }
